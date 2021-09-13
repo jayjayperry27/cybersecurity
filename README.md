@@ -73,12 +73,9 @@ SSH into the control node and follow the steps below:
 - Copy the config file to ansible container.
 - Update the config file to include hosts IP of ELK machine 
 - Run the playbook, and navigate to filebeat installation page to check that the installation worked as expected.
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
+
 
 Filebeat-playbook.yml is the playbook. TO specifiy which machine to install the ELK server on, the filebeat-config file must be edited and the hosts IP must be changed to the IP of the ELK-VM. To specify which machines to install filebeat on, the playbook must specify the host group as “webservers” with the IP addresses of the host machines being added to the “webservers” group in the hosts file of the ansible container.
 - _Which URL do you navigate to in order to check that the ELK server is running?
 http://(ELK-VM IP:5601)/app/kibana
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-Ansible-playbook filebeat-playbook.yml
+
